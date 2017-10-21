@@ -2,7 +2,7 @@
 
 ## COMMENT HERE WITH:
 ## Your name: Kyle Essenmacher
-## Anyone you worked with on this project:
+## Anyone you worked with on this project: Aaron Cheng, Michele Gee, Priscilla Nunez
 
 ## Below we have provided import statements, comments to separate out the
 #parts of the project, instructions/hints/examples, and at the end, TESTS.
@@ -30,6 +30,13 @@ def find_urls(s):
     url = re.findall('http\S*\.[a-z]+\S', s)
     return url
 
+'''
+The code above: 
+1) finding all of the instances "http" shows up.
+2) then it is taking out any white spaces with the \S*
+3) next it is finding any character that is a-z
+4) at the end it gives an output of the url
+'''
 
 
 ## PART 2  - Define a function grab_headlines.
@@ -54,6 +61,12 @@ def grab_headlines():
         most_read = s.split("\n")
 
     return most_read
+
+'''
+The code above is parsing through the Michigan Daily using the html.parser 
+plugin I installed via pip install. It is going through the most read items 
+on the site.
+'''
 
 ## PART 3 (a) Define a function called get_umsi_data.  It should create a dictionary
 ## saved in a variable umsi_titles whose keys are UMSI people's names, and whose
@@ -86,6 +99,11 @@ def get_umsi_data():
 
     return umsi_titles
 
+'''
+The code above is going through the UMSI website directory using the BS4 plugin. 
+It is finding the class, which is their titles and printing them in return. 
+'''
+
 ## PART 3 (b) Define a function called num_students.
 ## INPUT: The dictionary from get_umsi_data().
 ## OUTPUT: Return number of PhD students in the data.  (Don't forget, I may change the input data)
@@ -98,7 +116,12 @@ def num_students(data):
 
     return phd_students
 
+'''
+The code above is going through the data to try and find "PHD Students" in the data set. If it sees the key "PhD student" in the key value pair it will add them to a counter and count all 
+of the PhD students in the data. 
 
+At the end of the code it will return the number of PhD students found. 
+'''
 ########### TESTS; DO NOT CHANGE ANY CODE BELOW THIS LINE! ###########
 def test(got, expected, pts):
     score = 0;

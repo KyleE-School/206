@@ -100,7 +100,7 @@ def get_tweet(search_term):
 ##		data you got back!
 c = 0
 while c < 3: #enter tweet key word three times
-    tweet_term = input('Enter Tweet term: ') #Asks user for a search term
+    tweet_term = input('Enter Tweet term: ') #Prompts the user
     if len(tweet_term) < 1: break
     data = get_tweet(tweet_term) #Data is a dictionary
     c += 1
@@ -112,7 +112,7 @@ while c < 3: #enter tweet key word three times
     for tweet in data_dict['statuses'][0:5]: #Print content from 5 tweets
         text = tweet['text']
         created_at = tweet['created_at']
-        print('TEXT:', text) #Print out text
+        print('TEXT:', text) 
         print('CREATED AT:', created_at) #Print when the tweet was created
         print('\n')
 
